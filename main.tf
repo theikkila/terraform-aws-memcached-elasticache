@@ -10,26 +10,6 @@ resource "aws_security_group" "memcached" {
   }
 }
 
-resource "aws_security_group_rule" "memcached_ingress" {
-    type = "ingress"
-    from_port = 11211
-    to_port = 11211
-    protocol = "tcp"
-    cidr_blocks = ["${var.vpc_cidr_block}"]
-
-    security_group_id = "${aws_security_group.memcached.id}"
-}
-
-resource "aws_security_group_rule" "memcached_egress" {
-    type = "egress"
-    from_port = 11211
-    to_port = 11211
-    protocol = "tcp"
-    cidr_blocks = ["${var.vpc_cidr_block}"]
-
-    security_group_id = "${aws_security_group.memcached.id}"
-}
-
 #
 # ElastiCache resources
 #
