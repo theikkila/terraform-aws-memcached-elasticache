@@ -1,5 +1,4 @@
 variable "vpc_id" { }
-variable "vpc_cidr_block" { }
 
 variable "cache_name" { }
 variable "cache_nodes" {
