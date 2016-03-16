@@ -9,7 +9,6 @@ module "memcached_elasticache" {
   source = "github.com/azavea/terraform-aws-memcached-elasticache"
 
   vpc_id = "vpc-20f74844"
-  vpc_cidr_block = "10.0.0.0/16"
 
   cache_name = "cache"
   cache_nodes = "2"
@@ -26,7 +25,6 @@ module "memcached_elasticache" {
 ## Variables
 
 - `vpc_id` - ID of VPC meant to house the cache
-- `vpc_cidr_block` - CIDR block of VPC
 - `cache_name` - Name used as ElastiCache cluster ID
 - `cache_nodes` - Number of nodes in the cache cluster
 - `engine_version` - Cache engine version (default: `1.4.24`)
